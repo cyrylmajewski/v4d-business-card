@@ -1,8 +1,13 @@
 .card {
-    min-width: 750px;
-    min-height: 190px;
-    position: fixed;
+    position: relative;
     border: 3px solid #fff;
+    z-index: 9;
+
+    @media screen and (min-width: 1025px) {
+        min-width: 750px;
+        min-height: 190px;
+        position: fixed;
+    }
 }
 
 .container {
@@ -40,15 +45,19 @@
 }
 
 .windowsIcon {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    display: block;
-    background-color: #d8d4c6;
-    margin-right: 4px;
-    box-shadow: 1px 1px 0px 0px #231f20, -1px -1px 0px 0px #fff;
-    border: none;
-    flex-shrink: 0;
+    display: none;
+
+    @media screen and (min-width: 1025px) {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        display: block;
+        background-color: #d8d4c6;
+        margin-right: 4px;
+        box-shadow: 1px 1px 0px 0px #231f20, -1px -1px 0px 0px #fff;
+        border: none;
+        flex-shrink: 0;
+    }
 
     &:last-child {
         margin-right: 0;

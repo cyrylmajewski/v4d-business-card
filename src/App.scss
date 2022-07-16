@@ -2,9 +2,15 @@
   position: relative;
   display: grid;
   padding: 1%;
-  grid-template-rows: repeat(20, 1fr);
-  grid-template-columns: repeat(30, 1fr);
-  grid-gap: 60px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  
+  @media screen and (min-width: 1025px) {
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(30, 1fr);
+    grid-gap: 60px;
+  }
 
   > img {
     position: absolute;

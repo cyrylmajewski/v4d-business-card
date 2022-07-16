@@ -33,10 +33,12 @@ function App() {
   const [infoOpened, setInfoOpened] = useState(true);
   const [infoTop, setInfoTop] = useState('33%');
   const [infoLeft, setInfoLeft] = useState('14%');
+  const infoCardStyles = { gridRow: '1 / 3', gridColumn: '1 / -1' }
 
   const [contactsOpened, setContactsOpened] = useState(true);
   const [contactsTop, setContactsTop] = useState('12%');
   const [contactsLeft, setContactsLeft] = useState('57%');
+  const contactsCardStyles = { gridRow: '3 / 5', gridColumn: '1 / -1' }
 
   return (
     <div className="App">
@@ -49,6 +51,7 @@ function App() {
         posLeft={infoLeft}
         setTop={setInfoTop}
         setLeft={setInfoLeft}
+        customStyles={infoCardStyles}
       />}
       {contactsOpened && <Card
         fileName='contacts.txt'
@@ -58,6 +61,7 @@ function App() {
         posLeft={contactsLeft}
         setTop={setContactsTop}
         setLeft={setContactsLeft}
+        customStyles={contactsCardStyles}
       />}
       <RefIcon fileName='info.txt' openFile={setInfoOpened} />
       <RefIcon fileName='contacts.txt' openFile={setContactsOpened} />

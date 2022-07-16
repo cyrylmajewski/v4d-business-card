@@ -1,9 +1,13 @@
 .refIcon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60px;
-    z-index: 2;
+    display: none;
+
+    @media screen and (min-width: 1025px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60px;
+        z-index: 2;
+    }
 
     img {
         width: 100%;
